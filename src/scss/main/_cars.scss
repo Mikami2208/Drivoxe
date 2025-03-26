@@ -1,27 +1,76 @@
 .container {
+
+}
+
+.cars__container{
+	max-width: 1050px;
+	user-select: none;
 }
 .cars__title {
+	
     
 }
 .cars__subtitle {
+	margin-bottom: 100px;
 }
 .cars__cards {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 64px;
+
 }
 .cars__card {
+
+	display: flex;
+	flex-direction: column;
+	max-width: 270px;
+	padding: 12px 12px 24px 12px;
+	background-color: rgba(34, 34, 34, 0.03);
+	border-radius: 10px;
+
+	&:hover{
+		background-color: #fd3b3b;
+		color: #fff;
+		cursor: pointer;
+
+		.cars__buy-button{
+			background-color: white;
+			color: #fd3b3b;
+		}
+
+	}
+	
 }
 .cars__card-image {
+	margin-bottom: 37px;
 }
 .cars__card-name {
+	user-select: text;
+	margin-bottom: 30px;
+
 }
 .cars__buying {
+	display: flex;
+	justify-content: space-between;
 }
 .cars__price {
+	
 }
 .cars__price-starting {
+margin-bottom: 10px;
+opacity: 0.5;
 }
 .cars__price-value {
 }
 .cars__buy {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	
 }
 .cars__buy-button {
+	padding: 10px 35px !important;
+	user-select: none;
+	
 }
