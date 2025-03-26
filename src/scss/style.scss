@@ -1,0 +1,26 @@
+@use 'normalize.css';
+@use '_header.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
+body{
+  font-family: "Syne", sans-serif ;
+  font-size: 16px;
+}
+
+.wrapper {
+}
+
+.red-button{
+  background-color: red;
+  color: #fff;
+  border-radius: 32px;
+  padding: 10px 26px;
+  border: none;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #fff;
+	border: solid red 1px;
+	color: red;
+}
+}
