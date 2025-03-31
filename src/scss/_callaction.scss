@@ -1,0 +1,63 @@
+
+
+.callaction {
+}
+.container {
+}
+.callaction__card {
+	height: 100%;
+	max-width: 100%;
+	background: url('../img/main/callaction/CTA.png') no-repeat center center;
+	background-size: cover;
+	padding: 80px 250px 80px 0;
+	border-radius: 30px;
+	display: flex;
+	justify-content: flex-end;
+}
+.callaction__card-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	max-width: 418px;
+	
+}
+.callaction__card-title {
+	font-size: 56px;
+	color: #fff;
+	font-weight: 700;
+
+}
+.callaction__card-text {
+	font-size: 24px;
+	font-weight: 700;
+	color: #fff;
+}
+.button--primary {
+
+}
+
+.callaction__card-button{
+	max-width: 200px !important;
+	padding: 10px 40px !important;
+	border-radius: 32px;
+
+	border: 1px dashed #fff !important;
+}
+
+@media(max-width: 800px){
+	.callaction__card-title{
+		font-size: 42px;
+	}
+
+	.callaction__card-text{
+		font-size: 22px;
+	}
+
+	.callaction__card{
+		padding: 40px 10px;
+		padding-right: 0;
+		padding-left: 10px;
+		justify-content: flex-start;
+		background-position: 65%;
+	}
+}

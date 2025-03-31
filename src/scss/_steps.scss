@@ -1,6 +1,11 @@
 .steps {
     position: relative;
-    padding: 100px 0 50px 0;
+    padding: 100px 0 200px 0;
+    margin-bottom: 0 !important;
+}
+
+.steps__element-mobile{
+    display: none !important;
 }
 
 .steps::before{
@@ -12,7 +17,7 @@
     height: 100%;
     background: url('../img/main/steps/background.png') no-repeat center;
     background-size: cover;
-    filter: blur(1px);
+    filter: blur(4px);
     /* Размытие */
     z-index: -1;
 }
@@ -137,7 +142,7 @@
     filter: brightness(0) saturate(100%) invert(17%) sepia(93%) saturate(7494%) hue-rotate(1deg) brightness(97%) contrast(117%);
 }
 
-& .steps__element:nth-of-type(3)::before{
+& .steps__element:nth-of-type(4)::before{
     content: "";
     position: absolute;
     width: 7vw;
@@ -149,7 +154,7 @@
     transition: filter 0.3s ease; 
 }
 
-& .steps__element:nth-of-type(3):hover::before{
+& .steps__element:nth-of-type(4):hover::before{
     filter: brightness(0) saturate(100%) invert(17%) sepia(93%) saturate(7494%) hue-rotate(1deg) brightness(97%) contrast(117%);
 }
 }
@@ -216,13 +221,62 @@
         display: none;
     }
 
+    .steps__subtitle{
+        font-size: 36px !important;
+        padding: 0 10px 0 10px;
+    }
+
     .steps__column-1{
+        padding: 0;
         border: none;
+        & .steps__element{
+            flex-direction: row-reverse;
+            text-align: left;
+        }
+    }
+
+    .steps__column-2{
+        margin: 0;
     }
 
     .steps__elements{
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .element-book{
+        display: none;
+    }
+
+    .steps__element-mobile{
+        display: flex !important;
+    }
+
+    .element-text{
+        padding: 10px;
+        & .element-description{
+            margin-top: 0px;
+        }
+    }
+  
+
+    .white-space{
+        display: none;
+    }
+
+    .element-icon{
+        border: 1px solid black;
+    }
+}
+
+@media (max-width: 445px){
+    .steps__subtitle{
+        font-size: 28px !important;
+        padding: 0 10px 0 10px;
+    }
+    .steps__element{
+        gap: 8px;
     }
 }
 

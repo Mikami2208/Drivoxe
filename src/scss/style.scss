@@ -5,8 +5,19 @@
 @use './values';
 @use './reviews';
 @use './steps';
+@use './callaction';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
 
+
+.container {
+  margin: 0 auto;
+  max-width: calc(100vw - 450px);
+  @media(max-width: 1490px){
+    & {
+      max-width: calc(100vw - 100px);
+    }
+  }
+}
 
 .dsp-none{
   display: none;
@@ -69,4 +80,10 @@ h5{
   font-size: 56px;
   font-weight: 700;
   color: black
+}
+
+@media (max-width: 445px){
+  .__subtitle{
+      font-size: 32px !important;
+  }
 }

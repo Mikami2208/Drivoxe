@@ -28,17 +28,14 @@ body._lock{
   display: none;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: calc(100vw - 110px);
-}
+
 
 .header__container{
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 72px;
+  margin-bottom: 72px !important;
   
 }
 
