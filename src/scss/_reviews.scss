@@ -1,0 +1,99 @@
+.is-select{
+    opacity: 0.6;
+}
+
+.reviews {
+    background: url('../img/main/testimonials/background.png') center no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.reviews-container {
+
+    padding: 110px 0;
+}
+.container {
+}
+.reviews__title {
+    color: #fd3b3b !important;
+    margin-bottom: 40px;
+}
+.__title {
+}
+.reviews__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviews-arrow {
+    height: 20px;
+    padding: 10px 10px;
+    background-color: #fd3b3b;
+    border-radius: 50px;
+    & img{
+
+}
+}
+.back-arrow {
+
+}
+.reviews__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-review {
+    font-size: 42px;
+    text-align: center;
+    max-width: 885px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+.card-photo {
+}
+.card-name {
+    font-weight: 700;
+font-size: 24px;
+opacity: 0.6;
+}
+.dsp-none {
+}
+
+
+@media (max-width: 975px){
+    .card-review{
+        font-size: 36px;
+    }
+
+    .reviews-container{
+        padding: 55px 0;
+    }
+
+    .card-name{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 600px){
+    .card-review{
+        font-size: 18px;
+    }
+
+    .card-name{
+        font-size: 14px;
+    }
+    
+   .reviews__content{
+        position: relative;
+   }
+
+   .reviews-arrow{
+    position: absolute;
+    &.arrow{
+        right: -50px;
+    }
+
+    &.back-arrow{
+        left: -50px;
+    }
+   }
+}

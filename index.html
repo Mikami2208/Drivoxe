@@ -12,25 +12,40 @@
   <div class="page">
     <header class="header">
       <div class="container header__container">
-        <nav class="header__nav">
-          <img src="src/img/header/icons/Drivoxe..svg" alt="Logo" class="header__logo">
-          <ul class="header__menu">
-            <li class="header__menu-item">Service</li>
-            <li class="header__menu-item">Cars</li>
-            <li class="header__menu-item">Pricing</li>
-            <li class="header__menu-item">About</li>
-          </ul>
-          <div class="header__actions">
+        <div class="header__logo">
+          <img src="src/img/header/icons/Drivoxe..svg" alt="Logo" class="logo">
+        </div>
+        <div class="burger__body">
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li class="header__menu-item">Service</li>
+              <li class="header__menu-item">Cars</li>
+              <li class="header__menu-item">Pricing</li>
+              <li class="header__menu-item">About</li>
+            </ul>
+          </nav>
+
+          <div class="header__actions header__actions--mobile">
             <a href="#" class="button button--contact">Contact</a>
             <button class="button button--signup">Sign up</button>
           </div>
-        </nav>
+        </div>
+        <div class="header__actions">
+          <a href="#" class="button button--contact">Contact</a>
+          <button class="button button--signup">Sign up</button>
+        </div>
+        <div class="menu__icon">
+          <span></span>
+        </div>
 
+      </div>
+      <div class="container">
         <section class="header__content">
           <div class="header__content-text header__content-column">
             <h1 class="header__title">Your Journey, Your Car, Your Way</h1>
-            <h2 class="header__subtitle">Experience the ultimate freedom of choice with GoCar - tailor your adventure by
-              choosing from our premium fleet of vehicles.</h2>
+            <h4 class="header__subtitle">Experience the ultimate freedom of choice with GoCar - tailor your adventure
+              by
+              choosing from our premium fleet of vehicles.</h4>
             <button class="button button--primary">Get Started</button>
             <div class="social">
               <img src="src/img/header/icons/social/social-1.png" alt="" class="social__icon">
@@ -42,7 +57,7 @@
           <div class="header__content-info header__content-column">
             <div class="stats">
               <img src="src/img/header/people.png" alt="" class="stats__image">
-              <h3 class="stats__count">12.5K+ People</h3>
+              <h3 class="stats__count">12.5K+ Satisfied People</h3>
               <p class="stats__text">has used our services such as renting, buying, or even selling their car.</p>
             </div>
             <div class="stats__actions">
@@ -79,7 +94,7 @@
               <h4 class="cars__card-name">Horizon Mirage Convertible</h4>
               <div class="cars__buying">
                 <div class="cars__price">
-                  <h5 class="cars__price-starting">Starting at</h5>
+                  <h6 class="cars__price-starting">Starting at</h6>
                   <h4 class="cars__price-value">$79,000</h4>
                 </div>
                 <div class="cars__buy">
@@ -153,12 +168,139 @@
               </div>
             </div>
           </div>
+          <div class="cars__navigation">
+            <div class="cars__navigation-arrow back-arrow"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
+            <div class="cars__navigation-page">1</div>
+            <div class="cars__navigation-arrow"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="values">
+        <div class="values__container container">
+
+          <div class="values__text-block">
+            <h2 class="values__title">Why Choose Drivoxe?</h2>
+            <p class="values__description">Join our satisfied customers who trust us for their journeys. We serve with a
+              lot of values that you can feel directly.</p>
+          </div>
+
+          <div class="values__car-block">
+            <div class="values__cards">
+              <div class="values__card">
+                <h3 class="values__card-title">Easy Booking</h3>
+                <p class="values__card-description">Reserve your car in just a few clicks.</p>
+              </div>
+              <div class="values__card">
+                <h3 class="values__card-title">Affordable Rates</h3>
+                <p class="values__card-description">Best prices for every journey.</p>
+              </div>
+              <div class="values__card">
+                <h3 class="values__card-title">24/7 Support</h3>
+                <p class="values__card-description">We're here to assist you anytime.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews-container container">
+          <div class="reviews__title __title">WHAT OUR CUSTOMERS SAY</div>
+          <div class="reviews__content">
+            <div class="reviews-arrow back-arrow is-select"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
+
+            <div class="reviews__card">
+              <p class="card-review">"My Drivoxe experience was nothing short of incredible. The pristine car and
+                impeccable service made my trip unforgettable. I'll be back for more."</p>
+              <div class="card-photo"><img src="src/img/main/testimonials/woman.png" alt=""></div>
+              <p class="card-name">Aleea Thompson</p>
+            </div>
+
+            <div class="reviews__card dsp-none">
+              <p class="card-review">"Renting with Drivoxe was an absolute pleasure. The car was spotless, the process
+                was seamless, and the customer service was top-notch. I can't wait for my next trip!"</p>
+              <div class="card-photo"><img src="src/img/main/testimonials/woman2.png" alt=""></div>
+              <p class="card-name">Emma Richardson</p>
+            </div>
+
+            <div class="reviews__card dsp-none">
+              <p class="card-review">"Drivoxe exceeded all my expectations! From the smooth booking process to the
+                perfectly maintained vehicle. Highly recommend to anyone looking for a premium
+                experience."</p>
+              <div class="card-photo"><img src="src/img/main/testimonials/woman.png" alt=""></div>
+              <p class="card-name">James Carter</p>
+            </div>
+
+            <div class="reviews-arrow arrow"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="steps">
+        <div class="steps__container container">
+          <h3 class="steps__title __title">HOW IT WORKS</h3>
+          <h2 class="steps__subtitle __subtitle">Simple Steps to Get the Car</h2>
+          <div class="steps__elements">
+            <div class="steps__column steps__column-1">
+              <div class="steps__element">
+                <div class="element-text">
+                  <h4 class="element-name">Select</h4>
+                  <p class="element-description">Choose your desired car from our fleet.</p>
+                </div>
+                <div class="element-icon">
+                  <img src="./src/img/main/steps/icons/Icon1.png" alt="">
+                </div>
+              </div>
+              <div class="white-space"></div>
+              <div class="steps__element">
+                <div class="element-text">
+                  <h4 class="element-name">Drive</h4>
+                  <p class="element-description">Pick up your car
+                    and hit the road.</p>
+                </div>
+                <div class="element-icon">
+                  <img src="./src/img/main/steps/icons/Icon3.png" alt="">
+                </div>
+              </div>
+              <div class="white-space"></div>
+            </div>
+            <div class="steps__column steps__column-2">
+              <div class="white-space"></div>
+              <div class="steps__element element-book">
+                <div class="element-text">
+                  <h4 class="element-name">Book</h4>
+                  <p class="element-description">Reserve your car online or through our app.</p>
+                </div>
+                <div class="element-icon">
+                  <img src="./src/img/main/steps/icons/Icon2.png" alt="">
+                </div>
+              </div>
+
+              <div class="white-space"></div>
+              <div class="steps__element">
+                <div class="element-text">
+                  <h4 class="element-name">Return</h4>
+                  <p class="element-description">Bring the car back at the end of your rental period.</p>
+                </div>
+                <div class="element-icon">
+                  <img src="./src/img/main/steps/icons/Icon4.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
     </main>
   </div>
   <script type="module" src="/src/ts/main.ts"></script>
+  <script src="src/ts/burger.ts"></script>
 </body>
 
 </html>

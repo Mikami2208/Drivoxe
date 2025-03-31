@@ -2,8 +2,19 @@
 @use '_header.scss';
 @use './main/brandsLine';
 @use './main/cars';
+@use './values';
+@use './reviews';
+@use './steps';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
 
+
+.dsp-none{
+  display: none;
+}
+
+section{
+  margin-bottom: 100px;
+}
 body{
   font-family: "Syne", sans-serif ;
   font-size: 16px;
@@ -19,7 +30,9 @@ h4{
 }
 
 h5{
-  
+  font-size: 18px;
+  opacity: 0.6;
+  font-weight: 500;
 }
 .wrapper {
 }

@@ -18,6 +18,7 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 	gap: 64px;
+	margin-bottom: 60px;
 
 }
 .cars__card {
@@ -73,4 +74,42 @@ opacity: 0.5;
 	padding: 10px 35px !important;
 	user-select: none;
 	
+}
+
+
+.cars__navigation {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+}
+.cars__navigation-arrow {
+	display: flex;
+	align-items: center;
+	background-color: #fd3b3b;
+	border-radius: 50%;
+	padding: 12px 12px;
+	cursor: pointer;
+	
+	& img{
+		max-width: 10px;
+		height: 10px;
+	}
+
+}
+.back-arrow {
+	transform: scaleX(-1);
+
+}
+.cars__navigation-page {
+}
+
+@media (max-width: 975px){
+    .cars__title{
+        font-size: 18px  !important;
+    }
+    .cars__subtitle{
+        font-size: 42px !important;
+    }
 }
