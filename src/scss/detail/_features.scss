@@ -1,0 +1,39 @@
+.features {
+}
+.features__container {
+}
+.container {
+}
+.features__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.features__title {
+    font-size: 36px;
+}
+.__title {
+}
+.features__card-wrapper {
+    display: flex;
+    column-gap: 34px;
+}
+.features__card-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.features__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    background: #f8f8f8;
+    max-width: 480px;
+    border-radius: 10px;
+padding: 10px 20px;
+}
+.features__card-title {
+    text-align: left;
+}
+.features__card-text {
+
+}

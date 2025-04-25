@@ -5,42 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Drivoxe</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="home-page">
   <div class="page">
-    <header class="header">
-      <div class="header__container container">
-        <div class="header__logo">
-          <img src="src/img/header/icons/Drivoxe..svg" alt="Logo" class="logo">
-        </div>
-        <div class="burger__body">
-          <nav class="header__nav">
-            <ul class="header__menu">
-              <li class="header__menu-item">Service</li>
-              <li class="header__menu-item">Cars</li>
-              <li class="header__menu-item">Pricing</li>
-              <li class="header__menu-item">About</li>
-            </ul>
-          </nav>
 
-          <div class="header__actions header__actions--mobile">
-            <a href="#" class="button button--contact">Contact</a>
-            <button class="button button--signup">Sign up</button>
-          </div>
-        </div>
-        <div class="header__actions">
-          <a href="#" class="button button--contact">Contact</a>
-          <button class="button button--signup">Sign up</button>
-        </div>
-        <div class="menu__icon">
-          <span></span>
-        </div>
+    <div id="header"></div>
 
-      </div>
-      <div class="container">
-        <section class="header__content">
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
           <div class="header__content-text header__content-column">
             <h1 class="header__title">Your Journey, Your Car, Your Way</h1>
             <h4 class="header__subtitle">Experience the ultimate freedom of choice with GoCar - tailor your adventure
@@ -48,15 +22,15 @@
               choosing from our premium fleet of vehicles.</h4>
             <button class="button button--primary">Get Started</button>
             <div class="social">
-              <img src="src/img/header/icons/social/social-1.png" alt="" class="social__icon">
-              <img src="src/img/header/icons/social/social-2.svg" alt="" class="social__icon">
-              <img src="src/img/header/icons/social/social-3.svg" alt="" class="social__icon">
-              <img src="src/img/header/icons/social/social-4.svg" alt="" class="social__icon">
+              <img src="/assets/header/icons/social/social-1.png" alt="" class="social__icon">
+              <img src="/assets/header/icons/social/social-2.svg" alt="" class="social__icon">
+              <img src="/assets/header/icons/social/social-3.svg" alt="" class="social__icon">
+              <img src="/assets/header/icons/social/social-4.svg" alt="" class="social__icon">
             </div>
           </div>
           <div class="header__content-info header__content-column">
             <div class="stats">
-              <img src="src/img/header/people.png" alt="" class="stats__image">
+              <img src="/assets/header/people.png" alt="" class="stats__image">
               <h3 class="stats__count">12.5K+ Satisfied People</h3>
               <p class="stats__text">has used our services such as renting, buying, or even selling their car.</p>
             </div>
@@ -66,20 +40,17 @@
               <button class="button button--outline button--consult">Consult</button>
             </div>
           </div>
-        </section>
-      </div>
-    </header>
-
-    <main class="main">
+        </div>
+      </section>
       <section class="brands__line">
         <div class="container">
           <div class="brand__line-block">
-            <img src="src/img/main/icons/brands/icon-1.png" alt="" class="brand--icon">
-            <img src="src/img/main/icons/brands/icon-2.png" alt="" class="brand--icon">
-            <img src="src/img/main/icons/brands/icon-3.png" alt="" class="brand--icon">
-            <img src="src/img/main/icons/brands/icon-4.png" alt="" class="brand--icon">
-            <img src="src/img/main/icons/brands/icon-5.png" alt="" class="brand--icon">
-            <img src="src/img/main/icons/brands/icon-6.png" alt="" class="brand--icon">
+            <img src="/assets/main/icons/brands/icon-1.png" alt="" class="brand--icon">
+            <img src="/assets/main/icons/brands/icon-2.png" alt="" class="brand--icon">
+            <img src="/assets/main/icons/brands/icon-3.png" alt="" class="brand--icon">
+            <img src="/assets/main/icons/brands/icon-4.png" alt="" class="brand--icon">
+            <img src="/assets/main/icons/brands/icon-5.png" alt="" class="brand--icon">
+            <img src="/assets/main/icons/brands/icon-6.png" alt="" class="brand--icon">
           </div>
         </div>
       </section>
@@ -90,7 +61,7 @@
           <h2 class="cars__subtitle __subtitle">Our Impressive Fleet</h2>
           <div class="cars__cards">
             <div class="cars__card">
-              <img src="src/img/main/cars/Photo.png" alt="" class="cars__card-image">
+              <img src="/assets/main/cars/Photo.png" alt="" class="cars__card-image">
               <h4 class="cars__card-name">Horizon Mirage Convertible</h4>
               <div class="cars__buying">
                 <div class="cars__price">
@@ -98,12 +69,12 @@
                   <h4 class="cars__price-value">$79,000</h4>
                 </div>
                 <div class="cars__buy">
-                  <button class="button button--primary cars__buy-button">Buy</button>
+                  <a href="../detail.html" class="button button--primary cars__buy-button">Buy</a>
                 </div>
               </div>
             </div>
             <div class="cars__card">
-              <img src="src/img/main/cars/Photo.png" alt="" class="cars__card-image">
+              <img src="/assets/main/cars/Photo.png" alt="" class="cars__card-image">
               <h4 class="cars__card-name">Horizon Mirage Convertible</h4>
               <div class="cars__buying">
                 <div class="cars__price">
@@ -111,12 +82,12 @@
                   <h4 class="cars__price-value">$79,000</h4>
                 </div>
                 <div class="cars__buy">
-                  <button class="button button--primary cars__buy-button">Buy</button>
+                  <a href="../detail.html" class="button button--primary cars__buy-button">Buy</a>
                 </div>
               </div>
             </div>
             <div class="cars__card">
-              <img src="src/img/main/cars/Photo.png" alt="" class="cars__card-image">
+              <img src="/assets/main/cars/Photo.png" alt="" class="cars__card-image">
               <h4 class="cars__card-name">Horizon Mirage Convertible</h4>
               <div class="cars__buying">
                 <div class="cars__price">
@@ -124,12 +95,12 @@
                   <h4 class="cars__price-value">$79,000</h4>
                 </div>
                 <div class="cars__buy">
-                  <button class="button button--primary cars__buy-button">Buy</button>
+                  <a href="../detail.html" class="button button--primary cars__buy-button">Buy</a>
                 </div>
               </div>
             </div>
             <div class="cars__card">
-              <img src="src/img/main/cars/Photo.png" alt="" class="cars__card-image">
+              <img src="/assets/main/cars/Photo.png" alt="" class="cars__card-image">
               <h4 class="cars__card-name">Horizon Mirage Convertible</h4>
               <div class="cars__buying">
                 <div class="cars__price">
@@ -137,12 +108,12 @@
                   <h4 class="cars__price-value">$79,000</h4>
                 </div>
                 <div class="cars__buy">
-                  <button class="button button--primary cars__buy-button ">Buy</button>
+                  <a href="../detail.html" class="button button--primary cars__buy-button">Buy</a>
                 </div>
               </div>
             </div>
             <div class="cars__card">
-              <img src="src/img/main/cars/Photo.png" alt="" class="cars__card-image">
+              <img src="/assets/main/cars/Photo.png" alt="" class="cars__card-image">
               <h4 class="cars__card-name">Horizon Mirage Convertible</h4>
               <div class="cars__buying">
                 <div class="cars__price">
@@ -150,12 +121,12 @@
                   <h4 class="cars__price-value">$79,000</h4>
                 </div>
                 <div class="cars__buy">
-                  <button class="button button--primary cars__buy-button">Buy</button>
+                  <a href="../detail.html" class="button button--primary cars__buy-button">Buy</a>
                 </div>
               </div>
             </div>
             <div class="cars__card">
-              <img src="src/img/main/cars/Photo.png" alt="" class="cars__card-image">
+              <img src="/assets/main/cars/Photo.png" alt="" class="cars__card-image">
               <h4 class="cars__card-name">Horizon Mirage Convertible</h4>
               <div class="cars__buying">
                 <div class="cars__price">
@@ -163,15 +134,15 @@
                   <h4 class="cars__price-value">$79,000</h4>
                 </div>
                 <div class="cars__buy">
-                  <button class="button button--primary cars__buy-button">Buy</button>
+                  <a href="../detail.html" class="button button--primary cars__buy-button">Buy</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="cars__navigation">
-            <div class="cars__navigation-arrow back-arrow"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
+            <div class="cars__navigation-arrow back-arrow"><img src="/assets/main/cars/icons/arrow.png"></div>
             <div class="cars__navigation-page">1</div>
-            <div class="cars__navigation-arrow"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
+            <div class="cars__navigation-arrow"><img src="/assets/main/cars/icons/arrow.png" alt=""></div>
 
           </div>
         </div>
@@ -209,34 +180,40 @@
       <section class="reviews">
         <div class="reviews-container container">
           <div class="reviews__title __title">WHAT OUR CUSTOMERS SAY</div>
-          <div class="reviews__content">
-            <div class="reviews-arrow back-arrow is-select"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
+          <div class="reviews__swiper swiper">
+            <div class="reviews__content swiper-wrapper">
+              <div class="reviews__card swiper-slide">
+                <p class="card-review">"My Drivoxe experience was nothing short of incredible. The pristine car and
+                  impeccable service made my trip unforgettable. I'll be back for more."</p>
+                <div class="card-photo"><img src="/assets/main/testimonials/woman.png" alt=""></div>
+                <p class="card-name">Aleea Thompson</p>
+              </div>
 
-            <div class="reviews__card">
-              <p class="card-review">"My Drivoxe experience was nothing short of incredible. The pristine car and
-                impeccable service made my trip unforgettable. I'll be back for more."</p>
-              <div class="card-photo"><img src="src/img/main/testimonials/woman.png" alt=""></div>
-              <p class="card-name">Aleea Thompson</p>
+              <div class="reviews__card swiper-slide">
+                <p class="card-review">"Renting with Drivoxe was an absolute pleasure. The car was spotless, the process
+                  was seamless, and the customer service was top-notch. I can't wait for my next trip!"</p>
+                <div class="card-photo"><img src="/assets/main/testimonials/woman2.png" alt=""></div>
+                <p class="card-name">Emma Richardson</p>
+              </div>
+
+              <div class="reviews__card swiper-slide">
+                <p class="card-review">"Drivoxe exceeded all my expectations! From the smooth booking process to the
+                  perfectly maintained vehicle. Highly recommend to anyone looking for a premium
+                  experience."</p>
+                <div class="card-photo"><img src="/assets/main/testimonials/woman.png" alt=""></div>
+                <p class="card-name">James Carter</p>
+              </div>
+
+            </div>
+            <div class="reviews-arrow back-arrow swiper-button-prev"><img src="/assets/main/cars/icons/arrow.png"
+                alt="">
+            </div>
+            <div class="reviews-arrow arrow swiper-button-next"><img src="/assets/main/cars/icons/arrow.png" alt="">
             </div>
 
-            <div class="reviews__card dsp-none">
-              <p class="card-review">"Renting with Drivoxe was an absolute pleasure. The car was spotless, the process
-                was seamless, and the customer service was top-notch. I can't wait for my next trip!"</p>
-              <div class="card-photo"><img src="src/img/main/testimonials/woman2.png" alt=""></div>
-              <p class="card-name">Emma Richardson</p>
-            </div>
-
-            <div class="reviews__card dsp-none">
-              <p class="card-review">"Drivoxe exceeded all my expectations! From the smooth booking process to the
-                perfectly maintained vehicle. Highly recommend to anyone looking for a premium
-                experience."</p>
-              <div class="card-photo"><img src="src/img/main/testimonials/woman.png" alt=""></div>
-              <p class="card-name">James Carter</p>
-            </div>
-
-            <div class="reviews-arrow arrow"><img src="src/img/main/cars/icons/arrow.png" alt=""></div>
 
           </div>
+
         </div>
 
       </section>
@@ -253,7 +230,7 @@
                   <p class="element-description">Choose your desired car from our fleet.</p>
                 </div>
                 <div class="element-icon">
-                  <img src="./src/img/main/steps/icons/Icon1.png" alt="">
+                  <img src="/assets/main/steps/icons/Icon1.png" alt="">
                 </div>
               </div>
               <div class="steps__element steps__element-mobile">
@@ -262,7 +239,7 @@
                   <p class="element-description">Reserve your car online or through our app.</p>
                 </div>
                 <div class="element-icon">
-                  <img src="./src/img/main/steps/icons/Icon2.png" alt="">
+                  <img src="/assets/main/steps/icons/Icon2.png" alt="">
                 </div>
               </div>
               <div class="white-space"></div>
@@ -273,7 +250,7 @@
                     and hit the road.</p>
                 </div>
                 <div class="element-icon">
-                  <img src="./src/img/main/steps/icons/Icon3.png" alt="">
+                  <img src="/assets/main/steps/icons/Icon3.png" alt="">
                 </div>
               </div>
               <div class="white-space"></div>
@@ -286,7 +263,7 @@
                   <p class="element-description">Reserve your car online or through our app.</p>
                 </div>
                 <div class="element-icon">
-                  <img src="./src/img/main/steps/icons/Icon2.png" alt="">
+                  <img src="/assets/main/steps/icons/Icon2.png" alt="">
                 </div>
               </div>
 
@@ -297,7 +274,7 @@
                   <p class="element-description">Bring the car back at the end of your rental period.</p>
                 </div>
                 <div class="element-icon">
-                  <img src="./src/img/main/steps/icons/Icon4.png" alt="">
+                  <img src="/assets/main/steps/icons/Icon4.png" alt="">
                 </div>
               </div>
             </div>
@@ -311,17 +288,18 @@
           <div class="callaction__card">
             <div class="callaction__card-wrapper">
               <h3 class="callaction__card-title">Ready to Go?</h3>
-              <p class="callaction__card-text">Book your car wherever you are  and ride with us now!</p>
+              <p class="callaction__card-text">Book your car wherever you are and ride with us now!</p>
               <button class="callaction__card-button button--primary">Get Started</button>
             </div>
           </div>
         </div>
       </section>
-
     </main>
+
+    <div id="footer"></div>
+
   </div>
   <script type="module" src="/src/ts/main.ts"></script>
-  <script src="src/ts/burger.ts"></script>
 </body>
 
 </html>

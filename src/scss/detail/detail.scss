@@ -1,0 +1,23 @@
+@use '../nullstyle';
+
+
+.detail-page{
+
+    & header{
+        color: #fff;
+
+        & .header__logo .logo{
+            filter: brightness(0) invert(1);
+        }
+    }
+    @import '../default';
+    @import './hero';
+    @import './card';
+    @import './features';
+    @import './recomms';
+    @import './callaction';
+}
+
+
+
+

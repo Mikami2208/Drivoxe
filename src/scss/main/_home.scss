@@ -1,0 +1,11 @@
+
+.home-page{
+    @import './brandsLine';
+    @import './cars';
+    @import './values';
+    @import './reviews';
+    @import './steps';
+    @import './callaction';
+    @import '../default';
+    @import './hero';
+}

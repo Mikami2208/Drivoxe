@@ -1,33 +1,29 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import '../scss/style.scss';
+import './header.ts'
+import { initBurgerMenu } from './header.ts';
+import { loadFragment } from './utils/loadFragment.ts';
 
-const arrow = document.querySelector('.reviews-arrow.arrow') as HTMLElement | null;
-const backArrow = document.querySelector('.reviews-arrow.back-arrow') as HTMLElement | null;
-const reviewCards = document.querySelectorAll('.reviews__card') as NodeListOf<HTMLElement>;
-
-let index: number = 0;
-const maxIndex = reviewCards.length - 1;
-
-function updateReviews() {
-    reviewCards.forEach((card, i) => {
-        card.classList.toggle('dsp-none', i !== index);
-    });
-
-    arrow?.classList.toggle('is-select', index === maxIndex);
-    backArrow?.classList.toggle('is-select', index === 0);
-}
-
-arrow?.addEventListener('click', () => {
-    if (index < maxIndex) {
-        index++;
-        updateReviews();
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".reviews__swiper", {
+    modules: [Navigation, Pagination], 
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 });
 
-backArrow?.addEventListener('click', () => {
-    if (index > 0) {
-        index--;
-        updateReviews();
-    }
-});
-
-updateReviews();
+  loadFragment("header", "./includes/header.html", initBurgerMenu)
+  loadFragment("footer", "./includes/footer.html")
