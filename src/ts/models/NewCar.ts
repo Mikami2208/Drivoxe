@@ -30,7 +30,6 @@ export class NewCar extends Car{
 		return{
 			...super.toJSON(),
 			warrantyYears: this.warrantyYears,
-			isRecommended: this.isRecommended
 		}
 	}
 }

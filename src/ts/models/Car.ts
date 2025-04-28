@@ -70,13 +70,14 @@ export class Car implements ICar {
 
     toJSON(): object {
         return{
-            id: this.id,
             model : this.model,
+            type: this.type,
             price: this.price,
             description : this.description,
             specs : this.specs,
             features:this.features,
-            imageUrl : this.imageUrl
+            imageUrl : this.imageUrl,
+            isRecommended: this.isRecommended
         }
     }
 }
