@@ -2,12 +2,14 @@ import { IFeature } from "./feature.interface"
 import { ISpec } from "./spec.interface"
 
 export interface ICar {
-    id: string
-    model : string
-    price : number
-    description : string
-    specs: ISpec[]
-    features : IFeature[]
-    imageUrl? : string
+    getId(): string
+    getType(): string
+    getModel(): string
+    getPrice(): number
+    getDescription(): string
+    getSpecs(): ISpec[]
+    getFeatures(): IFeature[]
+    getImageUrl(): string[]
     toJSON() : object
+    isRecommended?: boolean
 }

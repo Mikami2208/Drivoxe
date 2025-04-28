@@ -8,6 +8,13 @@ import './header.ts'
 import { initBurgerMenu } from './header.ts';
 import { loadFragment } from './utils/loadFragment.ts';
 
+const carImages = document.querySelectorAll('#car-image') as NodeListOf<HTMLImageElement>
+const carNames = document.querySelectorAll('#car-name') as NodeListOf<HTMLHeadingElement>
+const carPrice = document.querySelectorAll('#car-price') as NodeListOf<HTMLHeadingElement>
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".reviews__swiper", {
     modules: [Navigation, Pagination], 
