@@ -1,9 +1,11 @@
 import { ICar } from '../interfaces/car.interface';
 import { IFeature } from '../interfaces/feature.interface';
+import { ISellable } from '../interfaces/sellable.interface';
 import { ISpec } from '../interfaces/spec.interface';
+import { DialogManager } from '../menagers/DialogManager';
 
 
-export class Car implements ICar {
+export class Car implements ICar, ISellable {
      private id : string
      private type: string
      private model : string
@@ -12,7 +14,7 @@ export class Car implements ICar {
      private specs : ISpec[]
      private features : IFeature[]
      private imageUrl : string[]
-     public isRecommended?: boolean;
+     private isRecommended: boolean;
 
     constructor(
         id : string,
@@ -23,7 +25,7 @@ export class Car implements ICar {
         specs : ISpec[],
         features : IFeature[],
         imageUrl : string[],
-        isRecommended?: boolean
+        isRecommended: boolean
     ){
         this.id = id
         this.type = type
@@ -67,6 +69,20 @@ export class Car implements ICar {
     public getImageUrl(): string[] {
         return this.imageUrl;
     }
+
+    public getIsRecommended(): boolean {
+        return this.isRecommended
+    }
+
+    sell(): void {
+        
+    }
+
+    getSaleInfo(): string {
+        return ""
+    }
+
+
 
     toJSON(): object {
         return{

@@ -21,7 +21,7 @@ export class NewElectricCar extends Car implements IElectricCar{
         batteryCapacity : number,
         chargeTime: number,
         warrantyYears : number,
-        isRecommended?: boolean
+        isRecommended: boolean
     ){
         super(id,type, model, price, description, specs, features, imageUrl, isRecommended)
         this.batteryCapacity = batteryCapacity

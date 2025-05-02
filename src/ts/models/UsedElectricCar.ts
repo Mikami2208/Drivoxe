@@ -3,7 +3,7 @@ import { Car } from "./Car";
 import { ISpec } from "../interfaces/spec.interface";
 import { IFeature } from "../interfaces/feature.interface";
 
-export class NewElectricCar extends Car implements IElectricCar{
+export class UsedElectricCar extends Car implements IElectricCar{
 	public batteryCapacity : number
 	public chargeTime : number
 	public mileage : number
@@ -19,9 +19,10 @@ export class NewElectricCar extends Car implements IElectricCar{
 		imageUrl : string[],
 		batteryCapacity : number,
 		chargeTime: number,
-		mileage : number
+		mileage : number,
+		isRecommended: boolean
 	){
-		super(id,type, model, price, description, specs, features, imageUrl)
+		super(id,type, model, price, description, specs, features, imageUrl, isRecommended)
 		this.batteryCapacity = batteryCapacity
 		this.chargeTime = chargeTime
 		this.mileage = mileage

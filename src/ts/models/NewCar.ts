@@ -15,7 +15,7 @@ export class NewCar extends Car{
         features : IFeature[],
         imageUrl : string[],
 		warrantyYears : number,
-		isRecommended?: boolean
+		isRecommended: boolean
 		
 	){
 		super(id, type, model, price, description, specs, features, imageUrl, isRecommended)

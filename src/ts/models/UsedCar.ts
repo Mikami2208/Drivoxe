@@ -17,9 +17,10 @@ export class UsedCar extends Car {
         specs : ISpec[],
         features : IFeature[],
         imageUrl : string[],
-		mileage : number
+		mileage : number,
+		isRecommended: boolean
 	){
-		super(id,type, model, price, description, specs, features, imageUrl)
+		super(id,type, model, price, description, specs, features, imageUrl, isRecommended)
 		this.mileage = mileage
 	}
 

@@ -11,5 +11,5 @@ export interface ICar {
     getFeatures(): IFeature[]
     getImageUrl(): string[]
     toJSON() : object
-    isRecommended?: boolean
+    getIsRecommended(): boolean
 }
