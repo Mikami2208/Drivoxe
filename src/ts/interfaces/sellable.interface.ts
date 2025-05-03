@@ -1,6 +1,6 @@
+import { Car } from "../models/Car";
 
 
 export interface ISellable {
-    sell(dialog: HTMLDialogElement): void
-    getSaleInfo(): string
+    requestPurchase(email: string, car: Car): Promise<void>
 }

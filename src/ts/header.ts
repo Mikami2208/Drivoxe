@@ -1,4 +1,5 @@
 
+
 export function initBurgerMenu(): void {
     const burgerIcon = document.querySelector('.menu__icon') as HTMLElement;
     const burgerMenu = document.querySelector('.burger__body') as HTMLElement;

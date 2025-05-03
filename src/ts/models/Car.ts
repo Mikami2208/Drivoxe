@@ -1,11 +1,9 @@
 import { ICar } from '../interfaces/car.interface';
 import { IFeature } from '../interfaces/feature.interface';
-import { ISellable } from '../interfaces/sellable.interface';
 import { ISpec } from '../interfaces/spec.interface';
-import { DialogManager } from '../menagers/DialogManager';
 
 
-export class Car implements ICar, ISellable {
+export class Car implements ICar {
      private id : string
      private type: string
      private model : string
@@ -73,15 +71,6 @@ export class Car implements ICar, ISellable {
     public getIsRecommended(): boolean {
         return this.isRecommended
     }
-
-    sell(): void {
-        
-    }
-
-    getSaleInfo(): string {
-        return ""
-    }
-
 
 
     toJSON(): object {

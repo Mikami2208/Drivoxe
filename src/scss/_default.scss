@@ -47,6 +47,10 @@
     opacity: 0.6;
     font-weight: 500;
   }
+
+  .dialog-active{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   
   .button {
     border-radius: 32px;
@@ -63,6 +67,16 @@
       background-color: #fff;
       border: solid red 1px;
       color: red;
+    }
+  }
+
+  .button--outline {
+    background-color: #fff;
+    border: solid red 1px;
+    color: red;
+    &:hover {
+      background-color: red;
+      color: #fff;
     }
   }
   

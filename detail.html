@@ -45,7 +45,8 @@
                                         <h3 class="card__price-start __title">Starting at</h3>
                                         <h4 class="card__price-price price" id="price">5900$</h4>
                                     </div>
-                                    <p class="card__description" id="car-desc">Elevate your journey with the Ford Mustang Convertible,
+                                    <p class="card__description" id="car-desc">Elevate your journey with the Ford
+                                        Mustang Convertible,
                                         the
                                         epitome of American muscle and open-air excitement. Feel the wind in your hair
                                         as
@@ -58,14 +59,18 @@
                                     <h3 class="card__specification-title">SPECIFICATIONS</h3>
                                     <div class="card__specification-lists">
                                         <ul class="card__specification-list">
-                                            <li class="card__specification-list-item list-item-1 car-spec">Convertible</li>
-                                            <li class="card__specification-list-item list-itme-2 car-spec">5.0-liter V8</li>
+                                            <li class="card__specification-list-item list-item-1 car-spec">Convertible
+                                            </li>
+                                            <li class="card__specification-list-item list-itme-2 car-spec">5.0-liter V8
+                                            </li>
                                             <li class="card__specification-list-item list-itme-3 car-spec">450 HP</li>
                                         </ul>
                                         <ul class="card__specification-list">
-                                            <li class="card__specification-list-item list-item-4 car-spec">Automatic</li>
-                                            <li class="card__specification-list-item list-itme-5 car-spec">4 passengers</li>
-                                            
+                                            <li class="card__specification-list-item list-item-4 car-spec">Automatic
+                                            </li>
+                                            <li class="card__specification-list-item list-itme-5 car-spec">4 passengers
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -92,22 +97,27 @@
                             <div class="features__card-column">
                                 <div class="features__card">
                                     <h3 class="features__card-title __title" id="car-feat-title">Convertible Top</h3>
-                                    <p class="features__card-text" id="car-feat-desc">Enjoy the open-air experience with an easy
+                                    <p class="features__card-text" id="car-feat-desc">Enjoy the open-air experience with
+                                        an easy
                                         power-operated convertible top.</p>
                                 </div>
                                 <div class="features__card">
-                                    <h3 class="features__card-title __title" id="car-feat-title">Infotainment System</h3>
-                                    <p class="features__card-text" id="car-feat-desc">Stay connected with a modern and flexible multimedia system</p>
+                                    <h3 class="features__card-title __title" id="car-feat-title">Infotainment System
+                                    </h3>
+                                    <p class="features__card-text" id="car-feat-desc">Stay connected with a modern and
+                                        flexible multimedia system</p>
                                 </div>
                             </div>
                             <div class="features__card-column">
                                 <div class="features__card">
                                     <h3 class="features__card-title __title" id="car-feat-title">Sport Mode</h3>
-                                    <p class="features__card-text" id="car-feat-desc">Unleash the full power of the V8 engine for an exhilarating ride.</p>
+                                    <p class="features__card-text" id="car-feat-desc">Unleash the full power of the V8
+                                        engine for an exhilarating ride.</p>
                                 </div>
                                 <div class="features__card">
                                     <h3 class="features__card-title __title" id="car-feat-title">Advanced Safety</h3>
-                                    <p class="features__card-text" id="car-feat-desc">Benefit from modern safety features, including airbags and stability control..</p>
+                                    <p class="features__card-text" id="car-feat-desc">Benefit from modern safety
+                                        features, including airbags and stability control..</p>
                                 </div>
                             </div>
                         </div>
@@ -115,17 +125,18 @@
                     </div>
                 </div>
             </section>
-            
+
             <section class="callaction">
                 <div class="container">
-                  <div class="callaction__card">
-                    <div class="callaction__card-wrapper">
-                      <h3 class="callaction__card-title">Book Your Adventure Today and Feel the Power of the Open Road.</h3>
-                      <button class="callaction__card-button button button--primary">Let's Drive with Us</button>
+                    <div class="callaction__card">
+                        <div class="callaction__card-wrapper">
+                            <h3 class="callaction__card-title">Book Your Adventure Today and Feel the Power of the Open
+                                Road.</h3>
+                            <button class="callaction__card-button button button--primary">Let's Drive with Us</button>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </section>
+            </section>
 
             <section class="recomms">
                 <div class="recomms__container container">
@@ -170,13 +181,30 @@
                 </div>
             </section>
 
-            
+
 
         </main>
 
 
         <div id="footer"></div>
     </div>
+
+    <dialog class="buy-dialog">
+        <form method="dialog" id="buy-form" class="dialog__form">
+            <h2 class="dialog__title __subtitle">Confirm your purchase</h2>
+
+            <div class="dialog__input-block">
+                <p class="dialog__text">Enter your email to confirm:</p>
+
+                <input type="email" class="dialog__input" id="email-input" placeholder="your@email.com" required>
+            </div>
+
+            <div class="dialog__buttons">
+                <button class="dialog__confirm-button button--primary button">Confirm</button>
+                <button class="dialog__cancel-button button button--outline" onclick="closeDialog()">Cancel</button>
+            </div>
+        </form>
+    </dialog>
     <script type="module" src="./src/ts/detail.ts"></script>
 </body>
 

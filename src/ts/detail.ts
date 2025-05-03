@@ -4,6 +4,7 @@ import { loadFragment } from './utils/loadFragment';
 import { FirebaseService } from './services/FirebaseService';
 import { db } from './services/firebase';
 import { collection } from 'firebase/firestore';
+import { DialogManager } from './menagers/DialogManager';
 
 const carName = document.querySelector('#car-name') as HTMLHeadingElement
 const carPrice = document.querySelector('#price') as HTMLHeadingElement
@@ -14,6 +15,22 @@ const carFeaturesDesc = document.querySelectorAll('#car-feat-desc') as NodeListO
 
 const carMainImg = document.querySelector('.main__img') as HTMLImageElement
 const carRowImg = document.querySelectorAll('.image__row') as NodeListOf<HTMLImageElement>
+
+const buyButton = document.querySelector('#sell-button') as HTMLButtonElement
+const confirmBtn = document.querySelector('.dialog__confirm-button') as HTMLButtonElement
+const cancelDialogBtn = document.querySelector('.dialog__cancel-button') as HTMLButtonElement
+const dialog = document.querySelector('.buy-dialog') as HTMLDialogElement
+
+
+const dialogManager : DialogManager = new DialogManager(dialog)
+
+buyButton.addEventListener('click', () => {
+    dialogManager.show()
+})
+
+cancelDialogBtn.addEventListener('click', () => {
+   dialogManager.close()
+})
 
 
 
