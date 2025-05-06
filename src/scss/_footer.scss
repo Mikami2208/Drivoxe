@@ -46,6 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 40px;
+    row-gap: 20px;
 }
 
 .footer__list {
@@ -80,5 +81,26 @@
 @media(max-width: 1290px){
     .footer__wrapper{
         flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+@media(max-width: 700px){
+    .footer__lists{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__column{
+        padding: 0;
+    }
+
+    .footer__title{
+        font-size: 36px;
+    }
+
+    .footer__copyright{
+        text-align: center;
     }
 }

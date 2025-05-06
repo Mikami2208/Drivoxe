@@ -11,6 +11,8 @@ body._lock{
   user-select: none;
   padding-top: 15px;
   overflow: hidden;
+  height: 80px;
+  z-index: 100;
 }
 
 
@@ -29,7 +31,7 @@ body._lock{
 .header__logo{
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
 }
 
 
@@ -100,7 +102,7 @@ body._lock{
   }
   .menu__icon { 
     display: block;
-    z-index: 5;
+    z-index: 100;
     display: block; 
     position: relative;
     width: 30px;
@@ -163,8 +165,17 @@ body._lock{
   overflow: auto; 
   text-align: left;
   background-color: rgba(255, 255, 255, 0.95);
-  z-index: 1;
+  z-index: 90;
   
+}
+
+.header__menu-item{
+  color: #333;
+}
+
+.burger__body._active{
+  padding: 100px 0 30px 0px;
+  left: 0;
 }
 
 .header__actions--mobile{

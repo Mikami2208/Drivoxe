@@ -2,8 +2,6 @@ import '../scss/style.scss';
 import { initBurgerMenu } from './header';
 import { loadFragment } from './utils/loadFragment';
 import { FirebaseService } from './services/FirebaseService';
-import { db } from './services/firebase';
-import { collection } from 'firebase/firestore';
 import { DialogManager } from './menagers/DialogManager';
 
 const carName = document.querySelector('#car-name') as HTMLHeadingElement

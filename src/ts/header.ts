@@ -6,8 +6,9 @@ export function initBurgerMenu(): void {
     
     if(burgerIcon && burgerMenu){
         burgerIcon.addEventListener('click', () =>{
-            burgerMenu?.classList.toggle('_active')
+            burgerMenu.classList.toggle('_active')
             document.body.classList.toggle('_lock')
+            document.body.classList.toggle('_burger-active')
         })
     }
 }    

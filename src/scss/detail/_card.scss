@@ -28,9 +28,13 @@
     flex-wrap: wrap;
 }
 .main__img {
+    width: 774px;
+    height: 549px;
     max-width: 774px;
 }
 .image__row {
+    max-width: 200px;
+    max-height: 200px;
 }
 .card__column-second {
     max-width: 519px;
@@ -173,6 +177,33 @@
         flex-direction: column;
         align-items: center;
         row-gap: 24px;
+    }
+
+    .image__row{
+        width: 180px;
+        max-width: 180px;
+        height: 180px;
+    }
+
+    .card__image-row{
+        justify-content: center;
+    }
+
+    .card__column{
+        align-items: center;
+    }
+
+    .card__about{
+        align-items: center;
+    }
+
+    .card__info{
+        align-items: center;
+        text-align: center;
+    }
+
+    .main__img{
+        height: 300px;
     }
 
 }

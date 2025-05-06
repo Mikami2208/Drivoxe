@@ -1,24 +1,41 @@
 @use '../nullstyle';
 
 
-.detail-page{
+.detail-page {
 
-    & header{
+    header {
         color: #fff;
 
-        & .header__logo .logo{
+        & .header__logo .logo {
             filter: brightness(0) invert(1);
         }
+
+        .menu__icon span,
+        .menu__icon::before,
+        .menu__icon::after {
+            background-color: #fff
+        }
     }
-    @import '../default';
-    @import './hero';
-    @import './card';
-    @import './features';
-    @import './recomms';
-    @import './callaction';
-    @import './dialog';
+
+    &._burger-active{
+        .header__logo .logo {
+            filter: brightness(0) invert(0);
+        }
+
+        .menu__icon span,
+        .menu__icon::before,
+        .menu__icon::after {
+            background-color: #333
+        }
+
+    }
+
+
+@import '../default';
+@import './hero';
+@import './card';
+@import './features';
+@import './recomms';
+@import './callaction';
+@import './dialog';
 }
-
-
-
-
