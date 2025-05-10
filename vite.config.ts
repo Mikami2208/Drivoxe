@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         register: path.resolve(__dirname, 'detail.html'),
+        catalog: path.resolve(__dirname, 'catalog.html')
       }
     }
   }

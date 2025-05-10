@@ -9,6 +9,8 @@ import { loadFragment } from './utils/loadFragment.ts';
 import { FirebaseService } from './services/FirebaseService.ts';
 import { Car } from './models/Car.ts';
 
+
+
 const carImages = document.querySelectorAll('#car-image') as NodeListOf<HTMLImageElement>
 const carNames = document.querySelectorAll('#car-name') as NodeListOf<HTMLHeadingElement>
 const carPrice = document.querySelectorAll('#car-price') as NodeListOf<HTMLHeadingElement>

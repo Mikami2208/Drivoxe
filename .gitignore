@@ -18,3 +18,7 @@ TODOs.md
 .eslintcache
 src/ts/models.ts
 .env
+src/scss/catalog
+public/assets/catalog
+catalog.html
+src/ts/catalog.ts
