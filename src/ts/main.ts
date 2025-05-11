@@ -17,6 +17,7 @@ const carPrice = document.querySelectorAll('#car-price') as NodeListOf<HTMLHeadi
 const carCards = document.querySelectorAll('.cars__card') as NodeListOf<HTMLDivElement>
 
 
+
 document.addEventListener("DOMContentLoaded", async function () {
   await loadFragment("header", "./includes/header.html", initBurgerMenu)
   await loadFragment("footer", "./includes/footer.html")
@@ -27,22 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   updateReccoms(recCars as Car[])
 
-
-  new Swiper(".reviews__swiper", {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-});
+})
 
 function updateReccoms(recCars: Car[]) {
   for(let i = 0; i< carCards.length; i++){
@@ -65,4 +51,21 @@ carCards.forEach(card => {
       window.location.href = `detail.html?id=${cardId}`
     }
   })
+})
+
+new Swiper(".reviews__swiper", {
+  modules: [Navigation],
+  navigation: {
+    nextEl: ".reviews-arrow-next",
+    prevEl: ".reviews-arrow-back",
+  },
+});
+
+new Swiper(".cars__wrapper", {
+modules: [Navigation],
+
+navigation: {
+  nextEl: ".cars__navigation-arrow-next",
+  prevEl: ".cars__navigation-arrow-back"
+}
 })
