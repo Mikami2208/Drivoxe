@@ -1,4 +1,4 @@
-import { collection, addDoc, getDocs, doc, setDoc, getDoc, query, where } from "firebase/firestore";
+import { collection, addDoc, getDocs, doc, setDoc, getDoc, query, where, limit } from "firebase/firestore";
 import { db } from "./firebase.ts";
 import { Car } from "../models/Car";
 import { NewCar } from "../models/NewCar.ts";
@@ -103,5 +103,29 @@ export class FirebaseService {
 			console.log(e)
 			return null
 		}
+	}
+
+	static async getCarsByType(array: string[]): Promise<Car[] | null> {
+		try{
+			const q = query(
+				collection(db, 'cars'),
+				where("type", "in", array),
+				limit(6)
+			)
+
+			const querySnapshot = await getDocs(q)
+			const newCars : (NewElectricCar | NewCar)[] = querySnapshot.docs.map(doc => {
+				const data = doc.data()
+
+				return createCarFromData(doc.id, data)
+			}).filter((car): car is NewCar | NewElectricCar => car !== undefined)
+
+			return newCars
+		}catch(e){
+			return null
+		}
+
+	
+		
 	}
 }

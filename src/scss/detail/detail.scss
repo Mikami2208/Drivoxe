@@ -4,7 +4,7 @@
 .detail-page {
 
     header {
-        color: #fff;
+        color: #fff !important;
 
         & .header__logo .logo {
             filter: brightness(0) invert(1);

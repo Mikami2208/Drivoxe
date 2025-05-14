@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   await loadFragment("header", "./includes/header.html", initBurgerMenu)
   await loadFragment("footer", "./includes/footer.html")
 
-  const recCars = await FirebaseService.getRecommendedCars();
+  const recCars = await FirebaseService.getCarsByType(["new-car", "new-electric"]);
   console.log(recCars);
 
 
