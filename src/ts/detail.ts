@@ -7,6 +7,8 @@ import { NewCar } from './models/NewCar';
 import { UsedCar } from './models/UsedCar';
 import { UsedElectricCar } from './models/UsedElectricCar';
 import { NewElectricCar } from './models/NewElectricCar';
+import { EmailService } from './services/EmailService';
+import { Car } from './models/Car';
 
 const carName = document.querySelector('#car-name') as HTMLHeadingElement
 const carPrice = document.querySelector('#price') as HTMLHeadingElement
@@ -28,7 +30,6 @@ const confirmBtn = document.querySelector('.dialog__confirm-button') as HTMLButt
 const cancelDialogBtn = document.querySelector('.dialog__cancel-button') as HTMLButtonElement
 const dialog = document.querySelector('.buy-dialog') as HTMLDialogElement
 
-
 carAddSpecs.forEach(element => {
     element.classList.add('dsp-none')
 });
@@ -46,6 +47,25 @@ cancelDialogBtn.addEventListener('click', () => {
     dialogManager.close()
 })
 
+confirmBtn.addEventListener('click', async () => {
+    const email = (document.getElementById('email-input') as HTMLInputElement).value;
+    const carId = getCarIdFromUrl();
+  
+    if (!carId) {
+      console.error("No car ID found in URL");
+      return;
+    }
+  
+    const car = await FirebaseService.getCar(carId);
+  
+    if (!car) {
+      console.error("Car not found in database");
+      return;
+    }
+  
+    const emailService = new EmailService();
+    emailService.requestPurchase(email, car);
+})
 
 
 
