@@ -143,6 +143,37 @@
     }
 }
 
+.car-add-spec::before{
+    top: 4px;
+}
+
+.electric-charge-time{
+    padding-bottom: 2px;
+    &::before{
+        background: url('/assets/detail/card/icons/battery-charging.svg') no-repeat;  
+    }
+}
+
+.warranty-years{
+    padding-bottom: 2px;
+    &::before{
+        background: url('/assets/detail/card/icons/coin.svg') no-repeat;  
+    }
+}
+
+.electric-battery{
+    padding-bottom: 2px;
+    &::before{
+        background: url('/assets/detail/card/icons/battery-full.svg') no-repeat;  
+    }
+}
+
+.mileage{
+    padding-bottom: 2px;
+    &::before{
+        background: url('/assets/detail/card/icons/speedometer.svg') no-repeat;  
+    }
+}
 .card__color {
     display: flex;
     flex-direction: column;

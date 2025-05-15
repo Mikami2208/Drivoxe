@@ -24,6 +24,10 @@ export class UsedCar extends Car {
 		this.mileage = mileage
 	}
 
+	public getMileage(): number{
+		return this.mileage
+	}
+
 	toJSON(): object {
 		return{
 			...super.toJSON(),

@@ -9,8 +9,6 @@ import { loadFragment } from './utils/loadFragment.ts';
 import { FirebaseService } from './services/FirebaseService.ts';
 import { Car } from './models/Car.ts';
 
-
-
 const carImages = document.querySelectorAll('#car-image') as NodeListOf<HTMLImageElement>
 const carNames = document.querySelectorAll('#car-name') as NodeListOf<HTMLHeadingElement>
 const carPrice = document.querySelectorAll('#car-price') as NodeListOf<HTMLHeadingElement>
@@ -22,21 +20,30 @@ document.addEventListener("DOMContentLoaded", async function () {
   await loadFragment("header", "./includes/header.html", initBurgerMenu)
   await loadFragment("footer", "./includes/footer.html")
 
-  const recCars = await FirebaseService.getCarsByType(["new-car", "new-electric"]);
-  console.log(recCars);
-
-
-  updateReccoms(recCars as Car[])
+  const newCars = await FirebaseService.getCarsByType(["new-car", "new-electric"]);
+  const usedCars = await FirebaseService.getCarsByType(["used-car", "used-electric"])
+  updateCards(newCars as Car[], usedCars as Car[])
 
 })
 
-function updateReccoms(recCars: Car[]) {
+function updateCards(newCars: Car[], usedCars: Car[]) {
+  let usedCarCardIndex = 0;
   for(let i = 0; i< carCards.length; i++){
-    if(recCars && recCars[i] !== null){
-      carImages[i].src = recCars[i].getImageUrl()[0]
-      carNames[i].innerHTML = recCars[i].getModel()
-      carPrice[i].innerHTML = `$${recCars[i].getPrice()}`
-      carCards[i].dataset.id = recCars[i].getId()
+    console.log(carCards[i])
+    if(newCars && newCars[i] !== null){
+      if(carCards[i].classList.contains('used-car')){
+        //carImages[i].src = usedCars[usedCarCardIndex].getImageUrl()[0]
+        carNames[i].innerHTML = usedCars[usedCarCardIndex].getModel()
+        carPrice[i].innerHTML = `$${usedCars[usedCarCardIndex].getPrice()}`
+        carCards[i].dataset.id = usedCars[usedCarCardIndex].getId()
+        usedCarCardIndex++
+      }else{
+        carImages[i].src = newCars[i].getImageUrl()[0]
+        carNames[i].innerHTML = newCars[i].getModel()
+        carPrice[i].innerHTML = `$${newCars[i].getPrice()}`
+        carCards[i].dataset.id = newCars[i].getId()
+      }
+  
     }else{
       console.error("Не данных")
     }
