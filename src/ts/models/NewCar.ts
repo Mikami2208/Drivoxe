@@ -3,7 +3,7 @@ import { IFeature } from '../interfaces/feature.interface';
 import { ISpec } from '../interfaces/spec.interface';
 
 export class NewCar extends Car{
-	public warrantyYears : number
+	private warrantyYears : number
 
 	constructor(
 		id : string,

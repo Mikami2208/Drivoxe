@@ -1,13 +1,12 @@
 
 import { IElectricCar } from "../interfaces/electricCar.interface";
-import { Car } from "./Car";
 import { ISpec } from "../interfaces/spec.interface";
 import { IFeature } from "../interfaces/feature.interface";
+import { NewCar } from "./NewCar";
 
-export class NewElectricCar extends Car implements IElectricCar{
+export class NewElectricCar extends NewCar implements IElectricCar{
     private batteryCapacity : number
     private chargeTime : number
-    private warrantyYears : number
 
     constructor(
         id : string,
@@ -23,10 +22,9 @@ export class NewElectricCar extends Car implements IElectricCar{
         warrantyYears : number,
         isRecommended: boolean
     ){
-        super(id,type, model, price, description, specs, features, imageUrl, isRecommended)
+        super(id,type, model, price, description, specs, features, imageUrl, warrantyYears, isRecommended)
         this.batteryCapacity = batteryCapacity
         this.chargeTime = chargeTime
-        this.warrantyYears = warrantyYears
     }
 
     public getBatteryCapacity(): number {
@@ -37,16 +35,12 @@ export class NewElectricCar extends Car implements IElectricCar{
         return this.chargeTime
     }
 
-    public getWarrantyYears(): number{
-        return this.warrantyYears
-    }
 
     toJSON(): object {
         return{
             ...super.toJSON(),
             batteryCapacity : this.batteryCapacity,
             chargeTime : this.chargeTime,
-            warrantyYears: this.warrantyYears
         }
     }
 }
