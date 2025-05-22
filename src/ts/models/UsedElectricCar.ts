@@ -4,8 +4,8 @@ import { IFeature } from "../interfaces/feature.interface";
 import { UsedCar } from "./UsedCar";
 
 export class UsedElectricCar extends UsedCar implements IElectricCar{
-	public batteryCapacity : number
-	public chargeTime : number
+	private batteryCapacity : number
+	private chargeTime : number
 
 	constructor(
 		id : string,

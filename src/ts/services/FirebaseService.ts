@@ -1,131 +1,90 @@
-import { collection, addDoc, getDocs, doc, setDoc, getDoc, query, where, limit } from "firebase/firestore";
+import { collection, addDoc, getDocs, doc, setDoc, getDoc, query, where, limit, writeBatch } from "firebase/firestore";
 import { db } from "./firebase.ts";
 import { Car } from "../models/Car";
 import { NewCar } from "../models/NewCar.ts";
 import { NewElectricCar } from "../models/NewElectricCar.ts";
 import { createCarFromData } from "../utils/createCarFromData.ts";
 
+
 export class FirebaseService {
-
-	static async addCar(car: Car) {
+	static async addCar(car: Car): Promise<void> {
 		try {
-			const carsCollection = collection(db, "cars")
-
-			const carDocRef = doc(carsCollection, car.getId())
-
-			await setDoc(carDocRef, car.toJSON())
-			console.log("Car added to data base with id: ", carDocRef.id)
-
+			const carDocRef = doc(db, "cars", car.getId());
+			await setDoc(carDocRef, car.toJSON());
+			console.log("Car added to database with id:", carDocRef.id);
 		} catch (e) {
-			console.log("Error adding car: ", e)
+			console.error("Error adding car:", e);
 		}
 	}
-
 
 	static async getCar(id: string): Promise<Car | null> {
 		try {
-			const carsRef = doc(db, "cars", id)
-			const docSnap = await getDoc(carsRef)
-
-			if (docSnap.exists()) {
-				const data = docSnap.data()
-				const newCar = createCarFromData(id, data)
-
-				return newCar
-			} else {
-				console.log("No such car!");
+			const docSnap = await getDoc(doc(db, "cars", id));
+			if (!docSnap.exists()) {
+				console.warn("No such car!");
 				return null;
 			}
+			const car = createCarFromData(id, docSnap.data());
+			return car ?? null;
 		} catch (e) {
-			console.error(e)
-			return null
+			console.error("Error fetching car:", e);
+			return null;
 		}
 	}
 
-	static async addAllCars(cars: Car[]) {
+	static async addAllCars(cars: Car[]): Promise<void> {
 		try {
-			const carsCollection = collection(db, "cars")
-			cars.forEach(async (car) => {
-				const carDocRef = doc(carsCollection, car.getId())
-				await setDoc(carDocRef, car.toJSON())
-				console.log("Car added to data base with id: ", carDocRef.id)
-			})
+			const batch = writeBatch(db);
+			const carsCollection = collection(db, "cars");
+
+			cars.forEach(car => {
+				const carDocRef = doc(carsCollection, car.getId());
+				batch.set(carDocRef, car.toJSON());
+			});
+
+			await batch.commit();
+			console.log("All cars added successfully.");
 		} catch (e) {
-			console.log(e)
+			console.error("Error adding cars batch:", e);
 		}
 	}
 
 	static async getRecommendedCars(): Promise<Car[] | null> {
 		try {
-			const q = query(
-				collection(db, "cars"),
-				where("isRecommended", "==", true)
-			)
-			const querySnapshot = await getDocs(q)
-			const recommendedCars: (NewCar | NewElectricCar)[] = querySnapshot.docs.map(doc => {
-				const data = doc.data()
+			const q = query(collection(db, "cars"), where("isRecommended", "==", true));
+			const querySnapshot = await getDocs(q);
 
-				if (data.type === 'new-car') {
-					return new NewCar(
-						doc.id,
-						data.type,
-						data.model,
-						data.price,
-						data.description,
-						data.specs,
-						data.features,
-						data.imageUrl,
-						data.warrantyYears,
-						data.isRecommended
-					)
+			const recommendedCars: Car[] = querySnapshot.docs
+				.map(doc => createCarFromData(doc.id, doc.data()))
+				.filter((car): car is Car => Boolean(car));
 
-				} else if (data.type === "new-electric") {
-					return new NewElectricCar(
-						doc.id,
-						data.type,
-						data.model,
-						data.price,
-						data.description,
-						data.specs,
-						data.features,
-						data.imageUrl,
-						data.batteryCapacity,
-						data.chargeTime,
-						data.warrantyYears,
-						data.isRecommended
-					)
-				}
-				return undefined
-			}).filter((car): car is NewCar | NewElectricCar => car !== undefined);
-
-			return recommendedCars
+			return recommendedCars;
 		} catch (e) {
-			console.log(e)
-			return null
+			console.error("Error fetching recommended cars:", e);
+			return null;
 		}
 	}
 
-	static async getCarsByType(array: string[]): Promise<Car[] | null> {
-		try{
+	static async getCarsByType(types: string[]): Promise<Car[] | null> {
+		try {
+			if (!types.length) return [];
+
 			const q = query(
-				collection(db, 'cars'),
-				where("type", "in", array),
+				collection(db, "cars"),
+				where("type", "in", types),
 				limit(6)
-			)
+			);
 
-			const querySnapshot = await getDocs(q)
-			const newCars : (NewElectricCar | NewCar)[] = querySnapshot.docs.map(doc => {
-				const data = doc.data()
+			const querySnapshot = await getDocs(q);
 
-				return createCarFromData(doc.id, data)
-			}).filter((car): car is NewCar | NewElectricCar => car !== undefined)
+			const cars: Car[] = querySnapshot.docs
+				.map(doc => createCarFromData(doc.id, doc.data()))
+				.filter((car): car is Car => Boolean(car));
 
-			return newCars
-		}catch(e){
-			return null
+			return cars;
+		} catch (e) {
+			console.error("Error fetching cars by type:", e);
+			return null;
 		}
-
-	
-		
 	}
 }
